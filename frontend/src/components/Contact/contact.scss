@@ -1,0 +1,116 @@
+@import "../../helper";
+
+.contact-section {
+  width: 100%;
+  height: 90vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f8f9;
+
+  .upper-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    .contact-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.12);
+      width: 25%;
+      padding: 8px 10px;
+      img {
+        width: 60px;
+      }
+      p {
+        font-size: 15px;
+      }
+      span {
+        @include fonts(14px, 400, 25px, black);
+      }
+    }
+  }
+
+  .contact-container {
+    width: 60%;
+    height: 60vh;
+    margin: 50px auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.12);
+    text-align: center;
+    border-radius: 10px;
+    h2 {
+      @include fonts(24px, 600, 40px, black);
+      padding: 10px 0px;
+    }
+    .contact-inp {
+      width: 80%;
+      input {
+        width: 30%;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        outline: none;
+        border: 1px solid lightgray;
+        background-color: transparent;
+        border-radius: 3px;
+        font-family: "Poppins", sans-serif;
+      }
+      textarea {
+        width: 96%;
+        height: 18vh;
+        padding: 8px 10px;
+        outline: none;
+        border: 1px solid lightgray;
+        margin: 10px auto;
+        background-color: transparent;
+        @include fonts(15px, 400, 25px, black);
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    .btn {
+      margin: 10px auto;
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #0078db;
+        color: white;
+        border-radius: 3px;
+        @include fonts(15px, 400, 25px);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+    .contact-section{
+        .upper-section{
+            flex-direction: column;
+            .contact-box{
+                width: 90%;
+                margin: 10px 0px;
+
+            }
+        }
+        .contact-container{
+            width: 95%;
+            // height: 75vh;
+            padding: 20px 0px;
+            .contact-inp{
+                width: 100%;
+                input{
+                    width: 90%;
+                    padding: 12px 10px;
+                }
+                textarea{
+                    width: 90%;
+                    font-family: "Poppins", sans-serif;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,115 @@
+@import "../../helper";
+.login-section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f8f9;
+  .login-container {
+    width: 55%;
+    height: 75%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.12);
+    border-radius: 10px;
+    .login-left {
+      width: 50%;
+      text-align: center;
+      h2 {
+        @include fonts(28px, 600, 50px, black);
+      }
+      .inp {
+        .box {
+          margin: 20px auto;
+          padding: 5px 5px;
+          width: 70%;
+          border-bottom: 2px solid lightgray;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .fa-solid {
+            color: gray;
+            font-size: 15px;
+          }
+          input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            font-family: "Poppins", sans-serif;
+            @include fonts(14px, 400, 20px, black);
+          }
+        }
+      }
+      .btn {
+        button {
+          width: 150px;
+          border-radius: 3px;
+          padding: 9px 20px;
+          background-color: #0078db;
+          @include fonts(16px, 500, 25px, white);
+          border: none;
+          font-family: "Poppins", sans-serif;
+          cursor: pointer;
+        }
+      }
+    }
+    .login-right {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 320px;
+      object-fit: contain;
+      }
+      .text {
+        cursor: pointer;
+        p {
+          width: 50%;      
+          margin: 0px auto;
+          &:hover {
+            border-bottom: 1px solid lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ----------------- RESPONSIVE DESIGN ---------------
+
+@media screen and (max-width: 480px){
+  .login-section{
+    // margin-top: 5vh;
+    .login-container{
+      width: 95%;
+      height: 100%;
+      flex-direction: column;
+      // justify-content: space-between;
+      .login-left{
+        width: 100%;
+
+
+        .inp{
+          padding-top: 50px;
+          .box{
+            width: 90%;
+          }
+        }
+      }
+      .login-right{
+        width: 100%;
+        padding: 30px 0px;
+        img{
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+

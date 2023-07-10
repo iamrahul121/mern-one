@@ -1,0 +1,113 @@
+@import "../../helper";
+.register-section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f8f9;
+  font-family: "Poppins", sans-serif;
+  .register-container {
+    width: 65%;
+    height: 85%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.12);
+    border-radius: 10px;
+    .register-left {
+      width: 50%;
+      text-align: center;
+      h2 {
+        @include fonts(28px, 600, 50px, black);
+      }
+      .inp {
+        .box {
+          margin: 20px auto;
+          padding: 5px 5px;
+          width: 70%;
+          border-bottom: 2px solid lightgray;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .fa-solid {
+            color: gray;
+            font-size: 15px;
+          }
+          input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            font-family: "Poppins", sans-serif;
+            @include fonts(14px, 400, 20px, black);
+          }
+        }
+        .box .number-box {
+          color: red;
+          // input::-webkit-inner-spin-button {
+          //   -webkit-appearance: none;
+          //   margin: 0;
+          // }
+        }
+      }
+      .btn {
+        button {
+          width: 130px;
+          border-radius: 3px;
+          padding: 9px 20px;
+          background-color: #0078db;
+          @include fonts(16px, 500, 25px, white);
+          border: none;
+          font-family: "Poppins", sans-serif;
+          cursor: pointer;
+        }
+      }
+    }
+    .register-right {
+      width: 50%;
+      text-align: center;
+      img {
+        width: 320px;
+      }
+      .text {
+        cursor: pointer;
+        p {
+          width: 45%;
+          margin: 0px auto;
+          &:hover {
+            border-bottom: 1px solid lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register-section {
+    .register-container {
+      width: 95%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .register-left {
+        width: 100%;
+        // padding: 10px 0px;
+        .inp {
+          .box {
+            width: 90%;
+          }
+        }
+      }
+      .register-right {
+        width: 100%;
+        padding: 20px 0px;
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+}

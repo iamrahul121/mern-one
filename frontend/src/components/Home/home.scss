@@ -1,0 +1,37 @@
+@import "../../helper";
+.home-section {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h4{
+        @include fonts(18px, 500, 32px, rgb(9, 103, 88))
+        
+    }
+    h2{
+        @include fonts(50px, 600, 55px, #0078db)
+    }
+    h3{
+      @include fonts(28px, 500, 55px, rgb(69, 69, 69))
+    }
+  }
+  .left-home {
+    width: 50%;
+    height: 100%;
+    background-color: #edf1ff;
+
+  }
+  .right-home {
+    width: 50%;
+    height: 100%;
+    background-color: #f7eaef;
+
+  }
+}
